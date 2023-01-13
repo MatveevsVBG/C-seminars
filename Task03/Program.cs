@@ -1,11 +1,4 @@
-﻿//Console.WriteLine("День недели: ");
-//Console.WriteLine("1 - Понедельник");
-//Console.WriteLine("2 - Вторник");
-//Console.WriteLine("3 - Среда");
-//Console.WriteLine("4 - Четверг");
-//Console.WriteLine("5 - Пятница");
-//Console.WriteLine("6 - Суббота");
-//Console.WriteLine("7 - Воскресенье");
+﻿
 
 Console.Write("Введите число: ");
 string day = Console.ReadLine();

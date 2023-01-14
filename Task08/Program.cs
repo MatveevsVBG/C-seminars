@@ -9,16 +9,16 @@ if (number > 0)
 {
     int count = 1;
 
-  while (count <= number)
-  {
-    if ((count % 2) == 0)
+    while (count <= number)
     {
+        if ((count % 2) == 0)
+        {
             Console.Write($"{count} ");
+        }
+        count++;
     }
-    count++;
-  }
 }
 else
 {
-  Console.WriteLine("Введено не натуральное число! \nПопробуйте ещё раз!");
+    Console.WriteLine("Введено не натуральное число! \nПопробуйте ещё раз!");
 }

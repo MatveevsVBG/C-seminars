@@ -11,7 +11,7 @@ if (number > 0)
 
     while (count <= number)
     {
-        if ((count % 2) == 0)
+        if (count % 2 == 0)
         {
             Console.Write($"{count} ");
         }

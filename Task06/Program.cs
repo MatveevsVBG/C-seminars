@@ -7,7 +7,7 @@ Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Число {number} чётное?");
 
-if ((number % 2) == 0)
+if (number % 2 == 0)
 {
     Console.WriteLine("Да");
 }

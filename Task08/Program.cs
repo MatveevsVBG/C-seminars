@@ -13,7 +13,11 @@ if (number > 0)
     {
         if (count % 2 == 0)
         {
-            Console.Write($"{count} ");
+            Console.Write($"{count}");
+            if (count <= number - 2)
+            {
+                Console.Write(", ");
+            }
         }
         count++;
     }

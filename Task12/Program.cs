@@ -5,26 +5,28 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-
-Console.WriteLine("Введите первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-
-// int remaines = Digit(int firstDigit, int secondDigit)
-
 int Digit(int firstDigit, int secondDigit)
 {
-
-    if (firstDigit % secondDigit == 0) Console.WriteLine("Первое число кратно второму");
-    else 
-    {
-        int result = firstDigit % secondDigit;
-        
-    }
-    return result;
+    return firstDigit % secondDigit;
 }
+
+Console.Write("Введите первое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
 int digit = Digit(num1, num2);
-Console.WriteLine($"Остаток от деления => {digit}");
+
+if (digit == 0) Console.WriteLine("Первое число кратно второму.");
+else
+{
+    Console.WriteLine("Первое число не кратно второму.");
+    Console.WriteLine($"Остаток от деления => {digit}");
+}
+
+
+
+
+
 
 

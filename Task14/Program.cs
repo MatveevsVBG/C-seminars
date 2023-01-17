@@ -12,7 +12,7 @@ bool Digit(int digit)
 {
     return digit % 7 == 0 && digit % 23 == 0;   
 }
-    
+  
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 

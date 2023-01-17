@@ -6,15 +6,15 @@
 // 918 -> 98
 // 12 мин
 
-int number = new Random().Next(100, 1000);
-Console.WriteLine($"Случайное трёхзначное число => {number}");
-
 int Digit(int num)
 {
-    int firstDigit = num / 100 * 10;
+    int firstDigit = num / 100;
     int lastDigit = num % 10;
-    int result = firstDigit + lastDigit;
+    int result = firstDigit * 10 + lastDigit;
     return result;
 }
+
+int number = new Random().Next(100, 1000);
+Console.WriteLine($"Случайное трёхзначное число => {number}");
 int digit = Digit(number);
 Console.WriteLine($"Число => {digit}");

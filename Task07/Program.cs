@@ -2,15 +2,14 @@
 //на выходе показывает последнюю цифру.
 
 Console.Write("Введите трёхзначное число: ");
-int triNum = Convert.ToInt32(Console.ReadLine());
-triNum = (int)Math.Abs(triNum);  //модуль числа
-int triCheck = triNum; 
+int numb = Convert.ToInt32(Console.ReadLine());
+numb = (int)Math.Abs(numb);      //модуль числа
+int numbCheck = numb;
 int count = 0;
-if (triCheck == 0) count = 1;  
-while (triCheck != 0)           // проверкка разрядности
+while (numbCheck != 0)           // проверкка разрядности
 {
-    triCheck = triCheck / 10;
+    numbCheck = numbCheck / 10;
     count++;
 }
-if (count == 3) Console.WriteLine($"Последняя цифра: {triNum % 10}");
+if (count == 3) Console.WriteLine($"Последняя цифра: {numb % 10}");
 else Console.Write("Введено не трёхзначное число!");

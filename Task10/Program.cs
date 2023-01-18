@@ -13,7 +13,6 @@ number = (int)Math.Abs(number);
 
 if (number / 100 >= 1 && number / 100 < 10)
 {
-
     int secondNum = SecondDig(number);
     Console.Write($" {secondNum}");
 }

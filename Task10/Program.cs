@@ -11,15 +11,9 @@ Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 number = (int)Math.Abs(number);
 
-int numCheck = number;
-int count = 0;
-while (numCheck != 0)
+if (number / 100 >= 1 && number / 100 < 10)
 {
-    numCheck = numCheck / 10;
-    count++;
-}
-if (count == 3)
-{
+
     int secondNum = SecondDig(number);
     Console.Write($" {secondNum}");
 }

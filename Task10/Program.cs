@@ -2,7 +2,7 @@
 // вход трёхзначное число и на выходе показывает вторую
 // цифру этого числа.
 
-int SecDig(int num)
+int SecondDig(int num)
 {
     return num / 10 % 10;
 }
@@ -20,7 +20,7 @@ while (numCheck != 0)
 }
 if (count == 3)
 {
-    int secondNum = SecDig(number);
+    int secondNum = SecondDig(number);
     Console.Write($" {secondNum}");
 }
 else Console.Write("Введено не трёхзначное число!");

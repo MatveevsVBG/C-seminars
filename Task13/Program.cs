@@ -17,7 +17,9 @@ int Separate(int num)
 Console.WriteLine("Введите любое целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 0) number = number * (-1);
-
-int thirdDig = Separate(number);
 if (number < 100) Console.WriteLine("Третьей цифры нет.");
-else Console.WriteLine($"  {thirdDig}");
+else 
+{
+    int thirdDig =Separate(number);
+    Console.WriteLine($"  {thirdDig}");
+}

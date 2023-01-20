@@ -9,7 +9,7 @@ int SecondDig(int num)
 
 Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-number = (int)Math.Abs(number);
+number = (int)Math.Abs(number);    // приведение к int не нужно!
 
 if (number / 100 >= 1 && number / 100 < 10)
 {

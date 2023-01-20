@@ -9,7 +9,7 @@ int SecondDig(int num)
 
 Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-number = (int)Math.Abs(number);
+number = Math.Abs(number);
 
 int numCheck = number;
 int count = 0;

@@ -17,5 +17,3 @@ if (array.Contains(day))
     Console.WriteLine(weekEnd ? "Выходной день :)" : "День не является выходным :(");
 }
 else Console.WriteLine("Неправильно введён номер дня недели!");
-
-

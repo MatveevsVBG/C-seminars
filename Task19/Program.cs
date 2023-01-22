@@ -20,9 +20,9 @@ Poliandrom(number);
 
 void Poliandrom(int num)
 {
-    if (num % 10 == num / 10000  && num / 10 % 10 == num / 1000 % 10) 
-         Console.Write("Да");
-    else Console.WriteLine("Нет");
+    if (num % 10 == num / 10000 && num / 10 % 10 == num / 1000 % 10)
+        Console.Write("Полиандром.");
+    else Console.WriteLine("Не полиандром.");
 }
 
 

@@ -25,6 +25,5 @@ Console.Write("Z2: ");
 int Z2 = Convert.ToInt32(Console.ReadLine());
 
 double distance = Distance(X1, Y1, Z1, X2, Y2, Z2);
-
 distance = Math.Round(distance, 2, MidpointRounding.ToZero);
 Console.WriteLine(distance);

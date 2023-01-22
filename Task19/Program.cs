@@ -16,13 +16,13 @@ if (number / 10000 < 1 || number / 10000 > 10)
     return;
 }
 
-Poliandrom(number);
+Palindrom(number);
 
-void Poliandrom(int num)
+void Palindrom(int num)
 {
     if (num % 10 == num / 10000 && num / 10 % 10 == num / 1000 % 10)
-        Console.Write("Полиандром.");
-    else Console.WriteLine("Не полиандром.");
+        Console.Write("Палиндром.");
+    else Console.WriteLine("Не палиндром.");
 }
 
 

@@ -10,20 +10,18 @@ Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 number = Math.Abs(number);
 
-if (number / 10000 < 1 || number / 10000 > 10)
+if (number < 10000 || number > 99999)
 {
     Console.Write("Введено не пятизначное число!");
     return;
 }
 
-Palindrom(number);
+bool result = Palindrom(number);
 
-void Palindrom(int num)
+if (result) Console.Write("Палиндром.");
+else Console.WriteLine("Не палиндром.");
+
+bool Palindrom(int num)
 {
-    if (num % 10 == num / 10000 && num / 10 % 10 == num / 1000 % 10)
-        Console.Write("Палиндром.");
-    else Console.WriteLine("Не палиндром.");
+    return num % 10 == num / 10000 && num / 10 % 10 == num / 1000 % 10;
 }
-
-
-

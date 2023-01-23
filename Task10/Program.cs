@@ -6,14 +6,13 @@ int SecondDig(int num)
 {
     return num / 10 % 10;
 }
-
 Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 number = (int)Math.Abs(number);    // приведение к int не нужно!
-
-if (number / 100 >= 1 && number / 100 < 10)
+if (number < 100 || number > 999)
 {
-    int secondNum = SecondDig(number);
-    Console.Write($" {secondNum}");
+    Console.Write("Введено не трёхзначное число!");
+    return;
 }
-else Console.Write("Введено не трёхзначное число!");
+int secondNum = SecondDig(number);
+Console.Write($" {secondNum}");

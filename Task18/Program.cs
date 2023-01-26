@@ -2,7 +2,7 @@
 // заданному номеру четверти, показывает диапазон
 // возможных координат точек в этой четверти (x и y).
 
-string Quarter(string digit)
+string Quarter(string? digit)
 {
     // if (digit == "1") return "x > 0  y > 0";
     // if (digit == "2") return "x < 0  y > 0";
@@ -20,7 +20,7 @@ string Quarter(string digit)
     }
 }
 Console.WriteLine("Введите номер четверти:");
-string number = Console.ReadLine();
+string? number = Console.ReadLine();
 
 string result = Quarter(number);
 Console.WriteLine(result);

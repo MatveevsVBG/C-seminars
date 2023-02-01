@@ -5,9 +5,10 @@
 double[] CreateArrayRndDouble(int size, int min, int max)
 {
     double[] array = new double[size];
+    Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Math.Round(new Random().NextDouble() * (max - min) + min, 2);   //Для вещественных
+        array[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 2);   //Для вещественных
     }
     return array;
 }

@@ -5,9 +5,10 @@
 int[] CreateRndPositive3digit(int size, int min, int max)
 {
     int[] array = new int[size];
+    Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max+1);
+        array[i] = rnd.Next(min, max+1);
     }
     return array;
 }

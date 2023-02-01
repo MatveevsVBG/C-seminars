@@ -1,0 +1,38 @@
+﻿// Задача 45: Напишите программу, которая будет создавать копию заданного массива
+// с помощью поэлементного копирования.
+
+int[] CreateRndArray(int size, int min, int max)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+    return array;
+}
+void PrintArray(int[] array)
+{
+    Console.Write($"[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write(array[i]);
+    }
+    Console.Write($"]");
+}
+
+int[] CopyArray(int[] array)
+{
+    int[] copyArray = new int[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        copyArray[i] = array[i];
+    }
+    return copyArray;
+}
+
+int[] arr = CreateRndArray(6, 1, 9);
+PrintArray(arr);
+int[] copy = CopyArray(arr);
+Console.Write(" -> ");
+PrintArray(arr);

@@ -8,6 +8,7 @@
 int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] array = new int[size];
+
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(min, max + 1);
@@ -42,5 +43,5 @@ int[] ArrayProductFirstLast(int[] array)
 int[] arr = CreateArrayRndInt(5, -5, 15);
 PrintArray(arr);
 
-int[] countElem = ArrayProductFirstLast(arr);
-PrintArray(countElem);
+int[] result = ArrayProductFirstLast(arr);
+PrintArray(result);

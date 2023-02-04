@@ -45,7 +45,7 @@ Console.WriteLine("Введите позицию элемента:");
 int posM = Convert.ToInt32(Console.ReadLine());
 int posN = Convert.ToInt32(Console.ReadLine());
 
-if (posM < 0 || posN < 0) Console.WriteLine("Введены неверные данные!");
+if (posM < 0 || posN < 0) Console.WriteLine("Введены неверные данные!");  // Добавлена проверка на ввод отрицательных данных.
 else
 {
     int[,] matr = CreateMatrixRndInt(3, 4, 0, 10);

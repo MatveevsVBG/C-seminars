@@ -43,8 +43,8 @@ double[] AverageColumns(int[,] matrix)
         double sum = 0;
         for (int i = 0; i < matrix.GetLength(0); i++) sum += matrix[i, j];
         
-        average = Math.Round(sum / matrix.GetLength(0), 1);
-        array[j] = average;
+        average = sum / matrix.GetLength(0);
+        array[j] = Math.Round(average, 1);
     }
     return array;
 }

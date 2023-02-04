@@ -42,7 +42,7 @@ double[] AverageColumns(int[,] matrix)
     {
         double sum = 0;
         for (int i = 0; i < matrix.GetLength(0); i++) sum += matrix[i, j];
-        
+
         average = sum / matrix.GetLength(0);
         array[j] = Math.Round(average, 1);
     }
@@ -63,3 +63,38 @@ int[,] matr = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(matr);
 double[] arr = AverageColumns(matr);
 PrintArray(arr);
+
+
+// string PrintMatrix(double[,] matrix)
+// {
+//     string str = string.Empty;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         str += "[";
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (j == matrix.GetLength(1) - 1) str += $" {matrix[i, j],3} ";
+//             else str += $" {matrix[i, j],3}, ";
+//         }
+//         str += "]\n";
+//     }
+//     return str;
+// }
+
+// string PrintArray(double[] array)
+// {
+//     string str = "[";
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (str == "[") str += array[i];
+//         else str = $", {array[i]}";
+//     }
+//     str += "]";
+//     return str;
+// }
+
+// double[,] matr = CreateMatrixRndInt(3, 4, 0, 10);
+// Console.WriteLine(PrintMatrix(matr));
+
+// double[] arr = AverageColumns(matr);
+// Console.WriteLine(PrintArray(arr));

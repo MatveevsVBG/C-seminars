@@ -27,8 +27,8 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],2} | ");
-            else Console.Write($"{matrix[i, j],2}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],3} | ");
+            else Console.Write($"{matrix[i, j],3}");
         }
         Console.WriteLine("|");
     }
@@ -37,11 +37,11 @@ void PrintMatrix(int[,] matrix)
 int[,] ProductOfTwoMatrix(int[,] matrix1, int[,] matrix2)
 {
     int[,] productMatrix = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
-    for (int i = 0; i < productMatrix.GetLength(0); i++)
+    for (int i = 0; i < matrix1.GetLength(0); i++)
     {
-        for (int j = 0; j < productMatrix.GetLength(1); j++)
+        for (int j = 0; j < matrix2.GetLength(1); j++)
         {
-            for (int k = 0; k < matrix1.GetLength(0); k++)
+            for (int k = 0; k < matrix2.GetLength(0); k++)
             {
                 productMatrix[i, j] += matrix1[i, k] * matrix2[k, j];
             }
@@ -50,14 +50,14 @@ int[,] ProductOfTwoMatrix(int[,] matrix1, int[,] matrix2)
     return productMatrix;
 }
 
-
-int[,] matr1 = CreateRndMatrixInt(2, 2, 0, 10);
-int[,] matr2 = CreateRndMatrixInt(2, 2, 0, 10);
+int[,] matr1 = CreateRndMatrixInt(3, 2, 0, 10);
+int[,] matr2 = CreateRndMatrixInt(2, 3, 0, 10);
 Console.WriteLine("Матрица 1: ");
 PrintMatrix(matr1);
 Console.WriteLine("Матрица 2: ");
 PrintMatrix(matr2);
-if (matr1.GetLength(1) != matr2.GetLength(0)) Console.WriteLine("Эти матрицы нельзя перемножить.");
+if (matr1.GetLength(1) != matr2.GetLength(0)) 
+    Console.WriteLine("Эти матрицы нельзя перемножить.");
 else
 {
     int[,] productMatr = ProductOfTwoMatrix(matr1, matr2);

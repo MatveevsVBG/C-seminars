@@ -3,7 +3,7 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-Console.WriteLine("Введите положительное число: ");
+Console.WriteLine("Введите целое положительное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number <= 0) Console.WriteLine("Неверный ввод!");
 else NaturalNumbers(number);

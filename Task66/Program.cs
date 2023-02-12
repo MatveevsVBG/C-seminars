@@ -11,7 +11,7 @@ if (numberM <= 0 || numberN <= 0)
 else
 {
     int sum = NaturalSumNumbers(numberM, numberN);
-    Console.WriteLine($"{sum} ");
+    Console.WriteLine($"M = {numberM}; N = {numberN} -> {sum}");
 }
 
 int NaturalSumNumbers(int num1, int num2)
